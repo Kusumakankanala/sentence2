@@ -1,0 +1,36 @@
+import java.util.HashMap;
+
+public class sentenceFrequency {
+
+    public static void main(String[] args) {
+        String sentence = "This is the most beautiful place i have ever seen";
+
+        HashMap<String, Integer> wordFreq = new HashMap<>();
+
+        // Split the sentence into words
+        String[] words = sentence.split(" ");
+
+        // Loop through the words and count the frequency of each word
+        for (String word : words) {
+            if (wordFreq.containsKey(word)) {
+                wordFreq.put(word, wordFreq.get(word) + 1);
+            } else {
+                wordFreq.put(word, 1);
+            }
+        }
+
+        // Print the word frequency hash map
+        System.out.println(wordFreq);
+    }
+}
+output:
+the=1
+most=1
+beautiful=1
+ever=1
+have=1
+This=1
+i=1
+is=1
+place=1
+seen=1
